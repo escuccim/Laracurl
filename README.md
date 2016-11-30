@@ -14,6 +14,9 @@ $headers = [
 $url = Laracurl::buildUrl($url, $parameterArray);
 $response = Laracurl::get($url, $headers);
 
+This is the only change I made to this package, but this change will allow you to add any other custom
+headers by adding another if() after line 157 of Laracurl.php
+
 # Installation
 To install the package, simply add the following to your Laravel installation's `composer.json` file
 

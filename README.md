@@ -3,6 +3,16 @@ Laracurl
 
 Laravel cURL Wrapper for [Andreas Lutro's](https://github.com/anlutro/php-curl) OOP cURL Class
 
+I made a slight change to the existing package. I added the ability to pass an extra argument to Laracurl::get
+which is an array of headers. The only parameter I currently check for is "useragent", which if present
+sets the user-agent header of the request to the data specified.
+
+This is used as follows:
+$headers = [
+	'useragent' => 'whatever-string',
+];
+$url = Laracurl::buildUrl($url, $parameterArray);
+$response = Laracurl::get($url, $headers);
 
 # Installation
 To install the package, simply add the following to your Laravel installation's `composer.json` file

@@ -7,6 +7,7 @@ I made a slight change to the existing package. I added the ability to pass an e
 which is an array of headers. The only parameter I currently check for is "useragent", which if present
 sets the user-agent header of the request to the data specified.
 
+# Note 
 This is used as follows:
 $headers = [
 	'useragent' => 'whatever-string',
